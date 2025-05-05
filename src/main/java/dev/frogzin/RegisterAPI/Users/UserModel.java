@@ -1,18 +1,30 @@
-package dev.frogzin.RegisterAPI;
+package dev.frogzin.RegisterAPI.Users;
 
+import dev.frogzin.RegisterAPI.Tasks.TaskModel;
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
-@Table(name = "tb_users_registration")
+@Table(name = "tb_users")
 public class UserModel {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
+
   private String Name;
+
   private int age;
+
   private String address;
+
   private String phone;
+
+  @ManyToOne()
+  @JoinColumn(name = "task_id") // Foreing Key
+  private TaskModel task;
+
 
   public UserModel() {
   }

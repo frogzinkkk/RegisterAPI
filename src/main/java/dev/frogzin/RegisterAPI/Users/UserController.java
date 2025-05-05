@@ -1,4 +1,4 @@
-package dev.frogzin.RegisterAPI;
+package dev.frogzin.RegisterAPI.Users;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
